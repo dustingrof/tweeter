@@ -1,0 +1,18 @@
+#page-header {
+  height: 400px;
+  width: 100%;
+  background-color: #d89b28;
+  background-image: url("../images/whitey.png");
+  color: #ffffff;
+}
+
+#page-header .avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#page-header .name {
+  align-items: center;
+  text-align: center;
+  /* color: #ffffff; */
+}

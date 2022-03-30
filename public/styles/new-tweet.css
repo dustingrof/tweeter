@@ -1,0 +1,25 @@
+#tweet-text {
+  width: 100%;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 3px solid #444444;
+  padding: 0;
+  height: 2em;
+}
+.new-tweet div {
+  display: flex;
+  justify-content: space-between;
+}
+.new-tweet button {
+  background-color: #4152a1;
+  color: white;
+  border: none;
+  padding: 5px 15px;
+  font-family: "Bungee", cursive;
+  font-size: 0.8em;
+}
+.new-tweet output {
+  font-family: "Bungee", cursive;
+  font-size: 0.8em;
+  color: #444444;
+}
