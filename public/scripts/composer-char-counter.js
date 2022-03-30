@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  const $tweetList = $(".tweets");
+  const $tweetList = $(".tweet-list");
   const $newTweetField = $("#tweet-text");
   const $tweetSubmitButton = $("#tweet-submit-button");
 
@@ -17,10 +17,10 @@ $(document).ready(function () {
   });
 
   // listen for the click event to occur
-  $tweetSubmitButton.on("click", () => {
+  $tweetSubmitButton.on("submit", (event) => {
     event.preventDefault();
     const inputValue = $newTweetField.val();
-    const $newArticle = $("<article>").text(inputValue);
+    const $newArticle = $("<article>").text(inputValue).addClass("tweet");
     $tweetList.prepend($newArticle);
     $newTweetField.val("").focus();
   });

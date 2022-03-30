@@ -4,6 +4,9 @@ nav {
   color: #ffffff;
   height: 120px;
   z-index: 1000;
+  position: fixed;
+  width: 100vw;
+  top: 0;
 }
 
 nav .container {
