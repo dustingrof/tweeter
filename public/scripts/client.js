@@ -30,6 +30,7 @@ const sampleData = [
 ];
 
 const createTweetElement = function (data) {
+  const postTimeAgo = timeago.format(data.created_at);
   const $tweetHTML = $(`
     <article class="tweet">
       <header>
@@ -42,7 +43,7 @@ const createTweetElement = function (data) {
         ${data.content.text}
       </p>
       <footer>
-        <div class="date-stamp">${data.created_at}</div>
+        <div class="date-stamp">${postTimeAgo}</div>
         <div class="tweet-icons">
           <a href=""><i class="fa-solid fa-flag"></i></a>
           <a href=""><i class="fa-solid fa-retweet"></i></a>
@@ -53,7 +54,6 @@ const createTweetElement = function (data) {
   `);
   return $tweetHTML;
 };
-
 const renderTweets = function (data) {
   for (const tweet of data) {
     $(".tweet-list").append(createTweetElement(tweet));
@@ -61,19 +61,35 @@ const renderTweets = function (data) {
 };
 
 $(document).ready(function () {
-  renderTweets(sampleData);
+  // listen for the submit event to occur
+  // renderTweets(sampleData);
+
+  $("#tweet-form").on("submit", function (event) {
+    event.preventDefault();
+    const tweetData = $("#tweet-text").val();
+    if (tweetData === "" || tweetData === null) {
+      return alert("Tweet is empty!");
+    } else if (tweetData.length > 140) {
+      return alert("Tweet limit exceeded!");
+    }
+    const data = $(this).serialize();
+    $.post("/tweets", data).then(() => {
+      console.log("post complete");
+      // load tweets function
+      // loadTweets();
+    });
+  });
+
+  const loadTweets = function () {
+    $.ajax("/tweets", { method: "GET" }).then((tweetsJSON) => {
+      // console.log("Success: ", morePostsHtml);
+      $(".tweets-list").append(renderTweets(tweetsJSON));
+    });
+  };
+  loadTweets();
 });
 
 //create variables for various parts on the page
 // const $tweetSubmitButton = $("#tweet-submit-button");
 // const $tweetList = $(".tweet-list");
 // const $newTweetField = $("#tweet-text");
-
-// listen for the submit event to occur
-// $tweetSubmitButton.on("submit", (event) => {
-//   event.preventDefault();
-//   const inputValue = $newTweetField.val();
-//   const $newArticle = $("<article>").text(inputValue).addClass("tweet");
-//   $tweetList.prepend($newArticle);
-//   $newTweetField.val("").focus();
-// });

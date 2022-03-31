@@ -11,6 +11,8 @@ $(document).ready(function () {
     $characterCounterOutput.val(counter);
     if (counter < 0) {
       $characterCounterOutput.css("color", "red");
+    } else {
+      $characterCounterOutput.css("color", "#444444");
     }
   });
 });
