@@ -4,17 +4,30 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-const sampleData = {
-  user: {
-    name: "Newton",
-    avatars: "https://i.imgur.com/73hZDYK.png",
-    handle: "@SirIsaac",
+const sampleData = [
+  {
+    user: {
+      name: "Newton",
+      avatars: "https://i.imgur.com/73hZDYK.png",
+      handle: "@SirIsaac",
+    },
+    content: {
+      text: "If I have seen further it is by standing on the shoulders of giants",
+    },
+    created_at: 1461116232227,
   },
-  content: {
-    text: "If I have seen further it is by standing on the shoulders of giants",
+  {
+    user: {
+      name: "Descartes",
+      avatars: "https://i.imgur.com/nlhLi3I.png",
+      handle: "@rd",
+    },
+    content: {
+      text: "Je pense , donc je suis",
+    },
+    created_at: 1461113959088,
   },
-  created_at: 1461116232227,
-};
+];
 
 const createTweetElement = function (data) {
   const $tweetHTML = $(`
@@ -41,15 +54,15 @@ const createTweetElement = function (data) {
   return $tweetHTML;
 };
 
-const renderTweets = function () {
-
+const renderTweets = function (data) {
+  for (const tweet of data) {
+    $(".tweet-list").append(createTweetElement(tweet));
+  }
 };
 
 $(document).ready(function () {
-  $(".tweet-list").append(createTweetElement(sampleData));
+  renderTweets(sampleData);
 });
-
-
 
 //create variables for various parts on the page
 // const $tweetSubmitButton = $("#tweet-submit-button");
