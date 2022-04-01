@@ -1,3 +1,12 @@
+/*****
+Compose Tweet CSS file... Styles the tweet submission form
+*****/
+
+/* Stop from from scrolling behind the top nav */
+form#tweet-form {
+  scroll-margin-top: 140px;
+}
+
 section.new-tweet h2 {
   margin-top: 20px;
 }
@@ -10,10 +19,12 @@ section.new-tweet h2 {
   padding: 0;
   height: 2em;
 }
+
 .new-tweet div {
   display: flex;
   justify-content: space-between;
 }
+
 .new-tweet button {
   background-color: #4152a1;
   color: white;
@@ -22,6 +33,7 @@ section.new-tweet h2 {
   font-family: "Bungee", cursive;
   font-size: 0.8em;
 }
+
 .new-tweet output {
   font-family: "Bungee", cursive;
   font-size: 0.8em;
@@ -37,6 +49,7 @@ section.new-tweet h2 {
   margin: 30px 0;
   display: none;
 }
+
 div#tweet-errors:before,
 div#tweet-errors:after {
   content: "\f071";

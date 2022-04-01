@@ -17,7 +17,7 @@
       href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap"
       rel="stylesheet"
     />
-
+    <!-- Insert Font Awesome From CDNJS -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
@@ -55,14 +55,16 @@
   </head>
 
   <body>
-    <!-- Top nav bar (fixed) -->
+    <!-- Top nav bar (sticky) -->
     <nav>
       <div class="container">
-        <span class="logo">tweeter</span>
-        <span class="tagline">Write a new tweet</span>
+        <a href="/"><span class="logo">tweeter</span></a>
+        <a href="#tweet-form"
+          ><span class="tagline" id="button-link">Write a new tweet</span></a
+        >
       </div>
     </nav>
-
+    <!-- Added container so that I could do a contained sheet on large desktop screens -->
     <div class="content-container">
       <header id="page-header">
         <div class="avatar">
@@ -95,6 +97,7 @@
             </div>
           </form>
         </section>
+        <!-- Where the tweets get dynamically added -->
         <section class="tweet-list"></section>
       </main>
     </div>

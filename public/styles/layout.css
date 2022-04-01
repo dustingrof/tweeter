@@ -5,7 +5,9 @@
  */
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
+
 *,
 *:before,
 *:after {
@@ -32,71 +34,74 @@ main {
   margin: 0 auto;
 }
 
- .hide-element { /*good for screen readers*/
-    border: 0;
-    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-    clip; rect(1px, 1px, 1px, 1px);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px; 
+.hide-element { /*good for screen readers, is hiding the tweet form label*/
+  border: 0;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip; rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; 
 } 
 
 
-  /* Another tablet breakpoint is minimum width of 768px */
-  @media only screen and (min-width: 768px) {
-    /* Write CSS rules that target Tablets screen sizes upwards - including desktops */
-    #page-header {
+/* A tablet breakpoint is minimum width of 768px */
+@media only screen and (min-width: 768px) {
+  /* Write CSS rules that target Tablets screen sizes upwards - including desktops */
+  #page-header {
     display: flex;
     flex-direction: row;
     justify-content: center;
-}
-#page-header .name {
-    align-items: center;
-    text-align: center;
-    /* color: #ffffff; */
-    align-self: center;
-}
-    
   }
 
-  /* Laptops / Desktops: minimum width of 1024px */
-  @media only screen and (min-width: 1024px) {
-    /* Write CSS rules that target Laptop/Desktop screen sizes and beyond */
-    header#page-header {
+  #page-header .name {
+    align-items: center;
+    text-align: center;
+    align-self: center;
+  }
+}
+
+/* Laptops / Desktops: minimum width of 1024px */
+@media only screen and (min-width: 1024px) {
+  /* Write CSS rules that target Laptop/Desktop screen sizes and beyond */
+  header#page-header {
     padding: 1em;
     margin: 2.5%;
     width: 25%;
-}
-    main {
+  }
+
+  main {
     width: 65%;
     margin: 2.5%;
     padding: 0 1em;
-}
-.content-container {
+  }
+
+  .content-container {
     max-width: 1310px;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
-}
-#page-header {
+    }
+
+  #page-header {
     display: initial;
-}
-#page-header .name {
-    align-items: initial;
-    padding: initial;
-}
   }
 
-  @media only screen and (min-width: 1310px) {
-    /* Write CSS rules that target Laptop/Desktop screen sizes and beyond */
-    body {
-      background-color: #dfe6ff;
-    }
-    .content-container {
-    background-color: #f4f1ec;
-    box-shadow: 1px 0px 20px #a8a8a8;
-}
+  #page-header .name {
+    align-items: initial;
+    padding: initial;
   }
+}
+
+@media only screen and (min-width: 1310px) {
+  /* Write CSS rules that target Laptop/Desktop screen sizes and beyond */
+  body {
+    background-color: #dfe6ff;
+  }
+  .content-container {
+    background-color: #f4f1ec;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  }
+}

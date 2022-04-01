@@ -4,7 +4,6 @@ $(document).ready(function () {
   // count characters in tweet box
   $newTweetField.on("input", function () {
     const maxLength = 140;
-    // const maxLength = $(this).attr("maxlength");
     const characters = $(this).val().length;
     const counter = maxLength - characters;
     const $characterCounterOutput = $(".chars-remaining");
