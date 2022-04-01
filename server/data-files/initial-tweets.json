@@ -1,24 +1,24 @@
 [
   {
     "user": {
-      "name": "Newton",
+      "name": "Ted Logan",
       "avatars": "https://i.imgur.com/73hZDYK.png",
-      "handle": "@SirIsaac"
+      "handle": "@tedtheodore"
     },
     "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
+      "text": "Strange things are afoot at the Circle K."
     },
-    "created_at": 1648617582180
+    "created_at": 1648618588065
   },
   {
     "user": {
-      "name": "Descartes",
+      "name": "Bill Esq.",
       "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd"
+      "handle": "@billspreston"
     },
     "content": {
-      "text": "Je pense , donc je suis"
+      "text": "This should be most triumphant."
     },
-    "created_at": 1648703982180
+    "created_at": 1648704988065
   }
 ]
