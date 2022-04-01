@@ -18,11 +18,6 @@
       rel="stylesheet"
     />
 
-    <!-- <link
-      href="../node_modules/@fortawesome/fontawesome-free/css/all.css"
-      rel="stylesheet"
-    /> -->
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
@@ -32,6 +27,10 @@
     />
 
     <!-- App CSS -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
@@ -63,58 +62,41 @@
         <span class="tagline">Write a new tweet</span>
       </div>
     </nav>
-    <header id="page-header">
-      <div class="avatar">
-        <img src="/images/profile-hex.png" />
-      </div>
-      <br />
-      <div class="name">
-        <h2>Your Name</h2>
-      </div>
-    </header>
 
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="new-tweet">
-        <h2>Compose Tweet</h2>
-        <form id="tweet-form">
-          <label for="tweet-text" class="hide-element"
-            >What are you humming about?</label
-          >
-          <textarea
-            name="text"
-            id="tweet-text"
-            placeholder="What are you humming about?"
-          ></textarea>
-          <div>
-            <button type="submit" id="tweet-submit-button">Tweet</button>
-            <output name="counter" class="chars-remaining" for="tweet-text"
-              >140</output
+    <div class="content-container">
+      <header id="page-header">
+        <div class="avatar">
+          <img src="/images/profile-hex.png" />
+        </div>
+        <div class="name">
+          <h2>Your Name</h2>
+        </div>
+      </header>
+
+      <!-- Page-specific (main) content here -->
+      <main class="container">
+        <section class="new-tweet">
+          <h2>Compose Tweet</h2>
+          <div id="tweet-errors"></div>
+          <form id="tweet-form">
+            <label for="tweet-text" class="hide-element"
+              >What are you humming about?</label
             >
-          </div>
-        </form>
-      </section>
-      <section class="tweet-list">
-        <!-- <article class="tweet">
-          <header>
-            <div class="display-name-avatar">
-              <img src="/images/profile-hex.png" alt="" />Newton
+            <textarea
+              name="text"
+              id="tweet-text"
+              placeholder="What are you humming about?"
+            ></textarea>
+            <div>
+              <button type="submit" id="tweet-submit-button">Tweet</button>
+              <output name="counter" class="chars-remaining" for="tweet-text"
+                >140</output
+              >
             </div>
-            <div class="username">@SirIsaac</div>
-          </header>
-          <p>
-            If I have seen further it is by standing on the shoulders of giants
-          </p>
-          <footer>
-            <div class="date-stamp">10 days ago</div>
-            <div class="tweet-icons">
-              <a href=""><i class="fa-solid fa-flag"></i></a>
-              <a href=""><i class="fa-solid fa-retweet"></i></a>
-              <a href=""><i class="fa-solid fa-heart"></i></a>
-            </div>
-          </footer>
-        </article> -->
-      </section>
-    </main>
+          </form>
+        </section>
+        <section class="tweet-list"></section>
+      </main>
+    </div>
   </body>
 </html>

@@ -24,7 +24,7 @@ article.tweet header img {
   padding-right: 10px;
 }
 
-article.tweet header .handle {
+article.tweet header .username {
   font-weight: 600;
   color: #bdc6f2;
 }

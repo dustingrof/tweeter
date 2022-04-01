@@ -1,3 +1,7 @@
+section.new-tweet h2 {
+  margin-top: 20px;
+}
+
 #tweet-text {
   width: 100%;
   background-color: transparent;
@@ -22,4 +26,22 @@
   font-family: "Bungee", cursive;
   font-size: 0.8em;
   color: #444444;
+}
+
+#tweet-errors {
+  color: red;
+  font-weight: bold;
+  padding: 30px;
+  background-color: pink;
+  border: 1px solid red;
+  margin: 30px 0;
+  display: none;
+}
+div#tweet-errors:before,
+div#tweet-errors:after {
+  content: "\f071";
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font: var(--fa-font-solid);
+  padding: 0 10px;
 }

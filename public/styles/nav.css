@@ -4,8 +4,7 @@ nav {
   color: #ffffff;
   height: 120px;
   z-index: 1000;
-  position: fixed;
-  width: 100vw;
+  position: sticky;
   top: 0;
 }
 
@@ -13,8 +12,8 @@ nav .container {
   display: flex;
   justify-content: space-between;
   max-width: 1310px;
-  /* margin: 0 auto; */
-  padding: 15px 1.5em;
+  margin: 0 auto;
+      padding: 1.5em 1.5em 0.5em 1.5em;
   width: 100%;
   align-items: flex-end;
 }
