@@ -70,6 +70,8 @@ main {
     padding: 1em;
     margin: 2.5%;
     width: 25%;
+    position: sticky;
+    top: 140px;
   }
 
   main {
